@@ -5,6 +5,7 @@ import org.bsuir.task.validator.CustomValidator;
 
 import java.time.LocalDate;
 
+
 public class Document {
     private String header;
     private LocalDate createDate;
@@ -16,11 +17,7 @@ public class Document {
         this.createDate = createDate;
         this.author = author;
         this.context = context;
-        if (!CustomValidator.isHeaderTaken(folder.getDocuments(), header)) {
-            folder.addDocument(this);
-        } else {
-            throw new CustomException("Couldn't set folder. The header is already taken! Header: " + header);
-        }
+        folder.addDocument(this);
     }
 
     public String getHeader() {

@@ -1,6 +1,6 @@
 package org.bsuir.task.exception;
 
-public class CustomException extends Exception {
+public class CustomException extends RuntimeException {
     public CustomException() {
 
     }
