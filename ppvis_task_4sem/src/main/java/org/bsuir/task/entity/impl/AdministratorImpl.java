@@ -16,7 +16,7 @@ public class AdministratorImpl implements Administrator {
 
     @Override
     public synchronized Folder createFolder(String name) {
-        return new Folder(name);
+        return new FolderImpl(name);
     }
 
     @Override
